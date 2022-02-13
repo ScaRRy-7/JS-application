@@ -15,8 +15,14 @@ let personsalMovieDB = {
 for (let i = 0; i < 2; i++) {
     const lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
           rateOfFilm = prompt("На сколько оцените его?", "");
-          
-    personsalMovieDB.movies[lastFilm] = rateOfFilm;
+    
+    if (lastFilm != null && rateOfFilm != null && lastFilm != "" && rateOfFilm != "" && lastFilm.length < 50) {
+        personsalMovieDB.movies[lastFilm] = rateOfFilm;
+        console.log("done");
+    } else {
+        console.log("error");
+        i--;
+    }
 }
 
 
