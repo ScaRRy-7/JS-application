@@ -10,9 +10,15 @@ let personsalMovieDB = {
     private: false
 };
 
-let lastFilm = prompt("Один из последних просмотренных фильмов?", "");
-let rateOfFilm = prompt("На сколько оцените его?", "");
 
-personsalMovieDB.movies[lastFilm] = rateOfFilm;
+
+for (let i = 0; i < 2; i++) {
+    const lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
+          rateOfFilm = prompt("На сколько оцените его?", "");
+          
+    personsalMovieDB.movies[lastFilm] = rateOfFilm;
+}
+
+
 
 console.log(personsalMovieDB);
